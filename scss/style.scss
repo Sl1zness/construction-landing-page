@@ -1,0 +1,326 @@
+@use "variables";
+@use "fonts";
+@use "common";
+
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+section {
+    max-width: 60%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/*
+==========
+HEADER
+==========
+*/
+
+.header {
+    width: 100%;
+    height: 100px;
+    background-color: variables.$header-background;
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-start;
+}
+
+.header__container {
+    width: 100%;
+    padding: 0 300px;
+    height: calc(100% - 30px);
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header__left {
+    max-width: 60%;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+}
+
+.header__info {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    margin-left: 50px;
+
+    &:first-child {
+        margin-left: 0;
+    }
+}
+
+.header__icon {
+    width: 24px;
+    height: auto;
+    filter: invert(100%);
+}
+
+.header__text {
+    margin-left: 10px;
+    color: variables.$dark-gray;
+    font-size: 12px;
+
+    p:first-of-type {
+        color: variables.$main-white;
+        margin-bottom: 10px;
+        font-family: "Open Sans SemiBold", sans-serif;
+    }
+}
+
+.header__right {
+    max-width: 15%;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: end;
+
+    a {
+        margin-left: 10px;
+    }
+}
+
+/*
+==========
+NAV
+==========
+*/
+
+// TODO: highlight corresponding with current section nav item
+
+.navigation {
+    visibility: hidden;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 70px;
+    width: 70%;
+    background-color: variables.$main-orange;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    box-sizing: border-box;
+    padding: 30px;
+    border-radius: 0 0 10px 10px;
+    color: variables.$main-white;
+}
+
+.navigation__logo {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+
+    p {
+        font-size: 22px;
+        text-transform: uppercase;
+        margin-left: 10px;
+        font-family: "Open Sans SemiBold", sans-serif;
+    }
+}
+
+.navigation__menu {
+    ul {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-evenly;
+
+        li {
+            margin-left: 25px;
+            text-transform: uppercase;
+            font-size: 16px;
+
+            a {
+                text-decoration: none;
+                color: variables.$main-white;
+            }
+        }
+    }
+}
+
+/*
+==========
+HOME
+==========
+*/
+
+// TODO: add background image
+
+.home {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    background-color: #f00;
+    padding: 150px 0 300px;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 28px;
+    font-family: "Open Sans SemiBold", sans-serif;
+}
+
+.home__slogan {
+    font-size: 52px;
+    max-width: 455px;
+    text-transform: uppercase;
+    font-family: "Open Sans Bold";
+    line-height: 54px;
+    margin-top: 5px;
+}
+
+.home__button {
+    margin-top: 50px;
+}
+
+/*
+==========
+FEATURES
+==========
+*/
+
+.features {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 65px 0;
+}
+
+.features__left {
+    display: flex;
+    flex-flow: column;
+    max-width: 450px;
+
+    ul {
+        margin-bottom: 50px;
+
+        li {
+            font-size: 16px;
+            font-family: "Montserrat Medium", sans-serif;
+            color: variables.$main-orange;
+            margin-top: 10px;
+            display: flex;
+            flex-flow: row;
+            align-items: baseline;
+
+            &:first-child {
+                margin-top: 0;
+            }
+
+            p {
+                margin-left: 10px;
+                line-height: 20px;
+            }
+
+            i {
+                width: 10px;
+                height: 10px;
+                padding: 2px;
+                font-size: 10px;
+                text-align: center;
+                background-color: variables.$main-orange;
+                color: variables.$main-white;
+                border-radius: 3px;
+            }
+        }
+    }
+}
+
+.features__annotation {
+    text-transform: none;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    line-height: 40px;
+}
+
+.features__text {
+    color: variables.$dark-gray;
+    font-size: 16px;
+    font-family: "Montserrat Regular", sans-serif;
+    margin-bottom: 30px;
+    line-height: 20px;
+}
+
+.features__button {
+    background-color: variables.$main-white;
+    
+    a {
+        color: variables.$main-orange;
+    }
+}
+
+.features__right {
+    max-width: 550px;
+    width: 100%;
+    position: relative;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.features__image-divider {
+    width: 4px;
+    height: 100%;
+    background-color: variables.$main-white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/*
+==========
+SERVICES
+==========
+*/
+
+.services {
+    padding: 65px 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.service {
+    width: 350px;
+    height: 160px;
+    background-color: variables.$main-orange;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+
+.service__name {
+    color: variables.$main-white;
+    font-family: "Montserrat SemiBold", sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+
+    &::after {
+        content: '';
+        display: flex;
+        width: 60%;
+        height: 3px;
+        background-color: variables.$main-white;
+        margin-top: 5px;
+    }
+}
+
+.service__image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}

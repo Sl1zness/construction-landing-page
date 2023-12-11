@@ -22,7 +22,7 @@ HEADER
 .header {
     width: 100%;
     height: 100px;
-    background-color: variables.$header-background;
+    background-color: variables.$main-header-background;
     box-sizing: border-box;
     display: flex;
     align-items: flex-start;
@@ -64,7 +64,7 @@ HEADER
 
 .header__text {
     margin-left: 10px;
-    color: variables.$dark-gray;
+    color: variables.$main-dark-gray;
     font-size: 12px;
 
     p:first-of-type {
@@ -157,7 +157,7 @@ HOME
     display: flex;
     flex-flow: column;
     justify-content: flex-start;
-    background-color: #f00;
+    background-color: variables.$main-dark-gray;
     padding: 150px 0 300px;
 }
 
@@ -234,6 +234,10 @@ FEATURES
     }
 }
 
+.features__title {
+    text-align: left;
+}
+
 .features__annotation {
     text-transform: none;
     text-align: left;
@@ -243,7 +247,7 @@ FEATURES
 }
 
 .features__text {
-    color: variables.$dark-gray;
+    color: variables.$main-dark-gray;
     font-size: 16px;
     font-family: "Montserrat Regular", sans-serif;
     margin-bottom: 30px;
@@ -280,19 +284,19 @@ FEATURES
 
 /*
 ==========
-SERVICES
+SCOPES
 ==========
 */
 
-.services {
+.scopes {
     padding: 65px 0;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     gap: 20px;
 }
 
-.service {
+.scope {
     width: 350px;
     height: 160px;
     background-color: variables.$main-orange;
@@ -303,7 +307,7 @@ SERVICES
     justify-content: space-between;
 }
 
-.service__name {
+.scope__name {
     color: variables.$main-white;
     font-family: "Montserrat SemiBold", sans-serif;
     font-size: 20px;
@@ -319,8 +323,105 @@ SERVICES
     }
 }
 
-.service__image {
+.scope__image {
     width: 120px;
     height: 120px;
     object-fit: cover;
+}
+
+/*
+==========
+ABOUT
+==========
+*/
+
+.about {
+    display: flex;
+    flex-flow: column;
+    padding: 65px 0;
+}
+
+.about__title {
+    margin-bottom: 15px;
+}
+
+.about__advantages {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.about__advantage {
+    display: flex;
+    flex-flow: row;
+    width: 350px;
+    height: auto;
+    min-height: 160px;
+}
+
+.about__img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+
+.about__name {
+    margin-left: 50px;
+    font-family: "Montserrat SemiBold", sans-serif;
+    font-size: 20px;
+}
+
+/*
+==========
+SERVICES
+==========
+*/
+
+// TODO: ADD MIX FOR ARTICLES
+
+.services {
+    display: flex;
+    flex-flow: column;
+    background-color: variables.$main-dark-blue;
+    padding: 65px;
+}
+
+.services__title {
+    margin-bottom: 15px;
+}
+
+.services__annotation {
+    color: variables.$main-white;
+}
+
+.services__list {
+    margin-top: 80px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.services__service {
+    display: flex;
+    flex-flow: row;
+    width: 350px;
+    height: auto;
+    min-height: 160px;
+}
+
+.service__img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+
+.service__name {
+    margin-left: 50px;
+    font-family: "Montserrat SemiBold", sans-serif;
+    font-size: 20px;
+    color: variables.$main-white;
+    text-transform: uppercase;
 }
